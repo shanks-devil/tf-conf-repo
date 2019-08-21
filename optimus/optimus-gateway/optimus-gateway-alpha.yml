@@ -1,10 +1,9 @@
 server:
   port: 8081
-spring:
-  cloud:
-    gateway:
-      routes:
-        predicates:
-        - Path=/basic-service/**
-        filters:
-        - RewritePath=/basic-service/**
+zuul:
+  routes:
+    basic-service:
+      path: /basic-service/**
+      serviceId: basic-service
+      stripPrefix: true
+      sensitiveHeaders:
