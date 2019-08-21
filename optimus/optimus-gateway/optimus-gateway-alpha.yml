@@ -1,9 +1,12 @@
 server:
   port: 8081
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
-    basic-service:
+    optimus-basic-service:
       path: /basic-service/**
-      serviceId: basic-service
+      serviceId: optimus-basic-service
       stripPrefix: true
       sensitiveHeaders:
