@@ -3,6 +3,7 @@ server:
 spring:
   cloud:
     gateway:
-      routes:
-      - id: optimus-basic-service
-        uri: /basic-service/**
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
