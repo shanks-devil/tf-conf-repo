@@ -1,12 +1,11 @@
 server:
   port: 8081
-zuul:
-  ribbon:
-    eager-load:
-      enabled: true
-  routes:
-    optimus-basic-service:
-      path: /basic-service/**
-      serviceId: optimus-basic-service
-      stripPrefix: true
-      sensitiveHeaders:
+spring:
+  cloud:
+    gateway:
+      routes:
+        optimus-basic-service:
+              path: /basic-service/**
+              serviceId: optimus-basic-service
+              stripPrefix: true
+              sensitiveHeaders:

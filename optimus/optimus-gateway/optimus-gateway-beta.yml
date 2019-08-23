@@ -1,9 +1,11 @@
 server:
   port: 8081
-zuul:
-  routes:
-    basic-service:
-      path: /basic-service/**
-      serviceId: basic-service
-      stripPrefix: true
-      sensitiveHeaders:
+spring:
+  cloud:
+    gateway:
+      routes:
+        optimus-basic-service:
+              path: /basic-service/**
+              serviceId: optimus-basic-service
+              stripPrefix: true
+              sensitiveHeaders:
