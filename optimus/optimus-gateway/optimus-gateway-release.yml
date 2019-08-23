@@ -4,8 +4,5 @@ spring:
   cloud:
     gateway:
       routes:
-        optimus-basic-service:
-              path: /basic-service/**
-              serviceId: optimus-basic-service
-              stripPrefix: true
-              sensitiveHeaders:
+      - id: optimus-basic-service
+        uri: /basic-service/**
