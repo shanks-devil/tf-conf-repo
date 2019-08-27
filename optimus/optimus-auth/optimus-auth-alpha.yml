@@ -1,2 +1,10 @@
 server:
   port: 8082
+optimus:
+  cloud:
+    auth:
+      clientId: ENC(HnJsk+8T5f4VKA9oYqrS1ReW4JTsXfy8k/4rk+c0rZE=)
+      secret: ENC(H72CShu7Qz/fsrnh4dlS4BpdMynyMsL9JjM9s9y4aRmFycUNTVzB/g==)
+      scopes: service
+      accessTokenValidity: 3600
+      refreshTokenValidity: 7200
