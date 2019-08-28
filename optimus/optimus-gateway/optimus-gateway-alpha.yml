@@ -5,6 +5,7 @@ spring:
     gateway:
       routes:
       - id: optimus-auth
+        uri: lb://optimus-auth
         predicates:
         - Path=/oauth/token
         filters:
