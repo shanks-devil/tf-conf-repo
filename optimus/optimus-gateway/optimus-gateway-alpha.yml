@@ -9,7 +9,7 @@ spring:
         predicates:
         - Path=/oauth/token
         filters:
-        - EncryptPassword=true
+        - EncryptPassword
       discovery:
         locator:
           enabled: true
