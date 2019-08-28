@@ -3,10 +3,16 @@ server:
 spring:
   cloud:
     gateway:
+      routes:
+      - id: optimus-auth
+        predicates:
+        - Path=/oauth/token
+        filters:
+        - EncryptPassword=true
       discovery:
         locator:
           enabled: true
           lowerCaseServiceId: true
 gateway:
   whitelist:
-    - /oauth/token
+    - /optimus-auth/oauth/token
