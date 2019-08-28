@@ -3,13 +3,6 @@ server:
 spring:
   cloud:
     gateway:
-      routes:
-      - id: optimus-auth
-        uri: lb://optimus-auth
-        predicates:
-        - Path=/oauth/token
-        filters:
-        - EncryptPassword
       discovery:
         locator:
           enabled: true
