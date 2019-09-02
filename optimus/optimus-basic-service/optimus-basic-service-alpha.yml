@@ -1,2 +1,8 @@
 server:
   port: 8088
+swagger:
+  title: 基础服务
+  description: 用户管理, 组织管理，角色管理，接口管理
+  url: https://github.com/shanks-devil/optimus/tree/master/optimus-basic-service
+  version: 1.0
+  enable: true
