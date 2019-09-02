@@ -10,10 +10,3 @@ spring:
 gateway:
   whitelist:
     - /optimus-auth/oauth/token
-
-swagger:
-  title: 网关服务
-  description: API网关
-  url: https://github.com/shanks-devil/optimus/tree/master/optimus-basic-service
-  version: 1.0
-  enable: true
