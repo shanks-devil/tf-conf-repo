@@ -10,3 +10,4 @@ spring:
 gateway:
   whitelist:
     - /optimus-auth/oauth/token
+    - /optimus-auth/oauth/removeToken
