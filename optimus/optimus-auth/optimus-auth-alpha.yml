@@ -14,3 +14,7 @@ optimus:
       refreshTokenValidity: 7200
       clientId: ENC(PrPdS8NUbqYWCQLK5fvlrg==)
       secret: ENC(mHu8I3sYD+6EuC6PvHkUygopSW0q/z+h)
+auth:
+  whitelist:
+    - /oauth/removeToken
+    - /oauth/removeToken/force
