@@ -1,5 +1,11 @@
 server:
   port: 8082
+spring:
+  datasource:
+      url: jdbc:mysql://localhost:3306/optimus_oauth?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: ENC(3Rryn6cUlnKz/0F2KQ//sA==)
+      password: ENC(vb29azSqoas6eebkSr0IzQ==)
 optimus:
   cloud:
     auth:
