@@ -1,8 +1,74 @@
-spring:
-  messages:
-    basename: i18n/messages
-    encoding: UTF-8
 jasypt:
   encryptor:
     password: optimus_cloud
     algorithm: PBEWithMD5AndTripleDES
+
+server:
+  tomcat:
+    max-threads: 500
+    min-spare-threads: 50
+
+spring:
+  http:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  #redis:
+    #remote: true
+    #host: 192.168.1.221
+    #port: 6379
+  #rabbitmq:
+    #host: 192.168.1.222
+    #port: 5672
+    #username: testuser
+    #password: testuser
+  #zipkin:
+    #rabbitmq:
+      #queue: zipkin-pre
+  #sleuth:
+    #sampler:
+      #percentage: 0.2
+
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      feignName:
+        connectTimeout: 300000
+        readTimeout: 300000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 20
+      maximumSize: 200
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+      allowMaximumSizeToDivergeFromCoreSize: true
+      keepAliveTimeMinutes: 1
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+logging:
+  level:
+    root: info
+  path: /app/logs/optimus-service/${spring.application.name}
