@@ -69,6 +69,7 @@ hystrix:
             timeoutInMilliseconds: 60000
 
 logging:
+  config: classpath:logback-spring.xml
   level:
     root: info
   path: /app/logs/optimus-service/${spring.application.name}
