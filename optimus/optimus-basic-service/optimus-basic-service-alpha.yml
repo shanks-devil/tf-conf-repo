@@ -2,7 +2,7 @@ server:
   port: 8088
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
-  type-aliases-package: com.github.tf.optimus.common.model
+  type-aliases-package: com.github.tf.optimus.*.model
 spring:
   datasource:
       url: jdbc:mysql://localhost:3306/optimus?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
